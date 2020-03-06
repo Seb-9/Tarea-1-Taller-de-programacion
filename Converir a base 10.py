@@ -6,18 +6,10 @@ def aux_x_b10(n,b,p,c):
         return aux_x_b10(n//10,b,p+1,((b**p)*(n%10))+c)
     else:
         return c
-def B10_x(n,b):
+def convertirDeBaseDiez(n,b):
     return aux1(n,b,0,0)
 def aux1(n,b,p,c):
     if (n//b)>b:
         return aux1(n%b,b,p+1,((n%b)*(10**p))+c)
     else:
         return (((n%b)*(10**p))+(n%b)*(10**(p+1))+c)
-def Bx_10(n,b):
-    return aux2(n,b,0,0)
-
-def aux2(n,b,p,c):
-    if n>b:
-        return aux2(n//10,b,p+1,((b**p)*(n%10))+c)
-    else:
-        return c
